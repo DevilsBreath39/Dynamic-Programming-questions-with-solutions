@@ -20,11 +20,6 @@ int maxProfit(vector<int> fees, int n)
         dp[i]=max(fees[i]+dp[i-2],dp[i-1]);
     }
 
-    for (int i = 0; i < n; i++)
-    {
-        cout << dp[i] << " ";
-    }
-    cout << endl;
     return dp[n-1];
 }
 
